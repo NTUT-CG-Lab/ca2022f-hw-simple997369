@@ -203,7 +203,7 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       作業程式碼，請放在 src 檔案夾。
-      <input type="button" name="back" onclick="parent.location='./CubismWebSamples-develop/Samples/TypeScript/Demo/index.html'" value="點我...">
+      <input type="button" name="back" onclick="parent.location='./src/index.html'" value="...按我...按我...按我...">
     </div>
   </div>
 
@@ -226,12 +226,12 @@
           <th>分項描述</th>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked="checked"></td>
           <td id='m2'>3</td>
           <td>Simple Baseline: 綁定指定參數 : ParamAngleX、ParamAngleY、ParamAngleZ</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked="checked"></td>
           <td id='m3'>4</td>
           <td>Medium Baseline: 綁定指定參數 : ParamBrowLY、ParamBrowRY、ParamBrowLX、ParamBrowRX</td>
         </tr>
@@ -241,7 +241,7 @@
           <td>Strong Baseline: 篩選出模型的標準參數及特定參數進行控制</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked"></td>
           <td id='m5'>1</td>
           <td>Strong Baseline: 觸碰身體會發出聲音</td>
         </tr>
@@ -253,7 +253,7 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="" type="video/mp4">
+        <source src="./video/111598007_hw3.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -270,12 +270,10 @@
     $('input').change(f).trigger('change');
   });
 
-  d3.select("#myCheckbox1").on("change",update);
   d3.select("#myCheckbox2").on("change",update);
   d3.select("#myCheckbox3").on("change",update);
   d3.select("#myCheckbox4").on("change",update);
   d3.select("#myCheckbox5").on("change",update);
-  d3.select("#myCheckbox6").on("change",update);
 
   update();
   
@@ -283,9 +281,6 @@
 
     var score = 0;
 
-    if (d3.select("#myCheckbox1").property("checked")){
-      score += parseInt(d3.select('#m1').html());
-    }
 
     if (d3.select("#myCheckbox2").property("checked")){
       score += parseInt(d3.select('#m2').html());   
@@ -303,9 +298,6 @@
       score += parseInt(d3.select('#m5').html());   
     }
 
-    if (d3.select("#myCheckbox6").property("checked")){
-      score += parseInt(d3.select('#m6').html());   
-    }
 
 
     d3.select("#myTotal").html(score);    
