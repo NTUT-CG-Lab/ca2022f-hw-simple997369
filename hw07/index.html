@@ -195,7 +195,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 01</h1>
+      <h1>作業 07</h1>
     </div>
   </div>
 
@@ -209,7 +209,9 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      這次的作業是用unity製作3D人物並讓她動起來，過程包含了更換衣服的紋理，我覺得衣服的材質真的是滿特別的，畫法跟一般認知上很不同，因為要做成3D的原因，衣服會變成圓圓的。
+      在做人物動作的時候我也卡了很久，因為完全不熟悉該如何使用，常常同樣的步驟要一直反覆找按鍵在哪，總之是滿有用的課，希望我以後也能自己做出一個3D遊戲。
+     
     </div>
   </div>
 
@@ -225,39 +227,24 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>1</td>
-          <td>描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>3</td>
+          <td>輸出3D人物模型</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>1</td>
-          <td>描述</td>
+          <td id='m2'>2</td>
+          <td>將角色匯入unity</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>1</td>
-          <td>描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>3</td>
+          <td>人物可以做動作</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
-          <td id='m4'>1</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked" ></td>
-          <td id='m5'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked" /></td>
-          <td id='m6'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked="checked" /></td>
-          <td id='m7'>2</td>
-          <td>描述</td>
+          <td id='m4'>2</td>
+          <td>角色套用booth網站中的衣服材質</td>
         </tr>
       </table>
     </div>
@@ -267,7 +254,7 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="./video/111598007_hw7.mp4" type="video/mp4"
       </video>
     </div>
   </div>
@@ -314,17 +301,6 @@
       score += parseInt(d3.select('#m4').html());   
     }
 
-    if (d3.select("#myCheckbox5").property("checked")){
-      score += parseInt(d3.select('#m5').html());   
-    }
-
-    if (d3.select("#myCheckbox6").property("checked")){
-      score += parseInt(d3.select('#m6').html());   
-    }
-
-    if (d3.select("#myCheckbox7").property("checked")){
-      score += parseInt(d3.select('#m7').html());   
-    }
 
     d3.select("#myTotal").html(score);    
   }
